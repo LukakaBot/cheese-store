@@ -14,11 +14,11 @@ export const themeConfig: DefaultTheme.Config = {
     provider: 'local'
   },
   /* 导航栏 */
-  nav: nav(),
+  nav: renderNavbar(),
   /* 侧边栏 */
   sidebar: {
-    '/interview/': { base: '/interview', items: sidebarInterview() },
-    '/framework/': { base: '/framework', items: sidebarFramework() },
+    '/interview/': { base: '/interview', items: renderInterviewSidebar() },
+    '/components/': { base: '/components', items: renderComponentsSidebar() },
   },
   /* 社交链接 */
   socialLinks: [
@@ -33,9 +33,10 @@ export const themeConfig: DefaultTheme.Config = {
     prev: '上一篇',
     next: '下一篇'
   }
-}
+};
 
-function nav(): DefaultTheme.NavItem[] {
+// 渲染导航栏
+function renderNavbar(): DefaultTheme.NavItem[] {
   return [
     {
       text: '首页',
@@ -44,12 +45,16 @@ function nav(): DefaultTheme.NavItem[] {
     {
       text: '面筋',
       link: '/interview/vue/v-model的作用',
-      activeMatch: '/interview/'
     },
-  ]
-}
+    {
+      text: '组件',
+      link: '/components/button'
+    }
+  ];
+};
 
-function sidebarInterview(): DefaultTheme.SidebarItem[] {
+// 渲染面经侧边栏
+function renderInterviewSidebar(): DefaultTheme.SidebarItem[] {
   return [{
     text: 'Vue',
     collapsed: true,
@@ -60,20 +65,17 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
       { text: 'vue3实现数据双向绑定的方法', link: '/vue/vue3实现数据双向绑定的方法' },
       { text: '路由懒加载', link: '/vue/路由懒加载' }
     ]
-  }]
-}
+  }];
+};
 
-function sidebarFramework(): DefaultTheme.SidebarItem[] {
+// 渲染组件侧边栏
+function renderComponentsSidebar(): DefaultTheme.SidebarItem[] {
   return [{
-    text: 'Framework',
+    text: '基础',
     collapsed: true,
     items: [
-      {
-        text: 'vue', collapsed: true, items: [
-          { text: 'v-model的作用', link: '/vue/v-model的作用' },
-          { text: 'v-model的实现原理', link: '/vue/v-model的实现原理' }
-        ]
-      }
+      { text: '按钮', link: '/button' },
+      { text: '图标', link: '/icon' }
     ]
-  }]
-}
+  }];
+};

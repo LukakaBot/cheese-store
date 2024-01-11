@@ -9,22 +9,22 @@ hero:
   actions:
     - theme: brand
       text: Markdown Examples
-      link: /markdown-examples
+      link: /
     - theme: alt
       text: API Examples
-      link: /api-examples
+      link: /
     - theme: alt
       text: 面筋
-      link: /interview/
+      link: /interview/vue/v-model的作用
 
 
 features:
   - icon: 📖
-    title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - icon: 💡
-    title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    title: 面经
+    details: 面经扫雷
+  - icon: 📦
+    title: 组件
+    details: 组件积累
   - icon: 💯
     title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
