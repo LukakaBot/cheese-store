@@ -41,5 +41,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: pages
-          folder: docs/.vitepress/dist/cheese-store
+          folder: docs/.vitepress/dist
           clean: true
